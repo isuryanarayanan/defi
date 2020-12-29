@@ -1,5 +1,5 @@
-# DEFI learning using solidity and eutherium.
-##Learning by example.
+# DEFI learning using solidity and etherium.
+## Learning by example.
 #### 1. voting contract
 > reference https://docs.soliditylang.org/en/v0.4.24/solidity-by-example.html
 
