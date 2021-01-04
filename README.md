@@ -1,6 +1,6 @@
 # DEFI learning using solidity and etherium.
 ## Learning by example.
-#### 1. voting contract
+### voting contract
 > reference https://docs.soliditylang.org/en/v0.4.24/solidity-by-example.html
 
 Voting is a meticulous task to carry out, being wrong with even a singular process in the whole task would result in an unfair outcome. Voting steps include,

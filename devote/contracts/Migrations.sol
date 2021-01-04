@@ -1,19 +1,28 @@
-// SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-contract Migrations {
-  address public owner = msg.sender;
-  uint public last_completed_migration;
+contract Ballot {
+    address owner;
 
-  modifier restricted() {
-    require(
-      msg.sender == owner,
-      "This function is restricted to the contract's owner"
-    );
-    _;
-  }
+    struct Voter{
+        bool canVote;
+        bool alreadyVoted;
+        address voterAddress;
+    }
 
-  function setCompleted(uint completed) public restricted {
-    last_completed_migration = completed;
-  }
+    uint public voterCount;
+
+    mapping(uint => Voter) public voters;
+
+    constructor() public {
+        owner = msg.sender;
+        addVoter(msg.sender);
+    }
+
+    function addVoter(address _voter) public {
+        voterCount++;
+        voters[voterCount] = Voter(true,false,_voter);
+    }
+    function getVoters() public view returns(uint voterCount) {
+        return voterCount;
+    }
 }
